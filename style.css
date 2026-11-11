@@ -1,0 +1,1167 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: relative;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+   background: url('images/photos.jpg') center / cover no-repeat;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.15));
+}
+
+/* Logo */
+
+.logo {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    line-height: 20px;
+
+    color: #1f5c3b;
+}
+
+
+/* Call button */
+
+.call-btn {
+
+    padding: 13px 25px;
+
+    background-color: white;
+
+    border: 1px solid #263b57;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.call-btn:hover {
+
+    background-color: #263b57;
+
+    color: white;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+    min-height: calc(100vh - 85px);
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+
+        url("images/abroad1.png");
+
+
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+
+    width: 60%;
+
+    color: white;
+    padding-left: 40px;
+}
+
+
+
+.hero-content h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    margin-bottom: 40px;
+}
+
+
+/* Benefits */
+
+.benefits p {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    font-size: 19px;
+}
+
+
+/* Green circle */
+
+.check {
+
+    width: 24px;
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 14px;
+
+    border-radius: 50%;
+
+    background-color: #56b96c;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.form-container {
+
+    width: 320px;
+
+    padding: 45px 20px;
+ max-width: 750px;
+    background-color: white;
+    box-sizing: border-box;
+margin: 0 auto;
+
+    /* Hover animation */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.form-container:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Form heading */
+
+.form-container h2 {
+
+    margin-bottom: 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   INPUTS & SELECT
+========================= */
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container select
+ {
+
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+    
+
+
+/* Focus */
+
+.form-container input:focus,
+.form-container select:focus {
+
+    border-color: #6ba875;
+}
+
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    margin-top: 5px;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+
+    color: #555;
+}
+
+
+.terms input {
+
+    margin-top: 2px;
+}
+
+
+.terms a {
+
+    color: #3975b5;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+    width: 100%;
+    height: 38px;
+    border: none;
+    background-color: #15803d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #166534;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        flex-direction: column;
+
+        padding: 50px 5%;
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 45px;
+    }
+
+
+    .benefits {
+
+        display: inline-block;
+
+        text-align: left;
+    }
+
+
+    .form-container {
+
+        width: 100%;
+
+        max-width: 450px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo {
+
+        font-size: 24px;
+       font-weight: 700;
+
+    }
+
+
+    .call-btn {
+
+        padding: 9px 13px;
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+
+        padding: 40px 20px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 34px;
+    }
+
+
+    .benefits p {
+
+        font-size: 15px;
+    }
+
+
+    .form-container {
+
+        padding: 28px 20px;
+    }
+
+
+    .form-container h2 {
+
+        font-size: 22px;
+    }
+
+}
+
+/* =========================
+   SEAMLESS MOVING BANNER
+   ========================= */
+
+.scholarship-banner {
+    width: 100%;
+    height: 48px;
+    background: #ed1c24;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: bannerMove 14s linear infinite;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-right: 35px;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@keyframes bannerMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+/* =========================
+   MBA HERO SECTION
+========================= */
+
+
+.mba-hero {
+    min-height: calc(100vh - 85px);
+    padding: 20px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: linear-gradient(
+        120deg,
+        #f2fff8,
+        #e7f8ef,
+        #ffffff
+    );
+}
+
+
+
+/* LEFT CONTENT */
+
+.mba-hero-content {
+    flex: 1;
+     min-width: 0;
+    max-width: 700px;
+}
+
+.mba-tag {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 12px;
+}
+.mba-hero-content h1 {
+    font-size: clamp(38px, 4vw, 54px);
+    line-height: 1.08;
+    margin-bottom: 18px;
+}
+
+.mba-hero-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+
+/* BUTTONS */
+
+.mba-buttons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.mba-btn,
+.mba-outline-btn {
+    width: 270px;
+    min-height: 72px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.mba-btn {
+    border: none;
+    background: #16834f;
+    color: white;
+}
+
+.mba-btn:hover {
+    background: #0f653c;
+    transform: translateY(-2px);
+}
+
+.mba-outline-btn {
+    background: white;
+    border: 1.5px solid #16834f;
+    color: #16834f;
+}
+
+.mba-outline-btn:hover {
+    background: #16834f;
+    color: white;
+}
+
+
+/* STATS */
+
+.mba-stats {
+    display: flex;
+    gap: 45px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat strong {
+    font-size: 24px;
+    color: #123d2d;
+}
+
+.stat span {
+    font-size: 15px;
+    color: #666;
+    margin-top: 3px;
+}
+
+
+/* =========================
+   SEARCH CARD
+========================= */
+
+
+
+.search-icon {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.mba-search-card h2 {
+     margin-bottom: 4px;
+    font-size: 21px;
+        line-height: 1.2;
+}
+
+.mba-search-card p {
+margin: 2px 0 6px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+
+/* Form card */
+.mba-search-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5eee9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form heading */
+.mba-search-card h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+/* Description */
+.mba-search-card p {
+    margin: 3px 0 8px;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #666;
+}
+
+/* Labels */
+.mba-search-card label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs and dropdowns */
+.mba-search-card input[type="text"],
+.mba-search-card input[type="email"],
+.mba-search-card input[type="tel"],
+.mba-search-card select {
+    width: 100%;
+    min-height: 36px;
+    padding: 6px 10px;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    background: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+/* HOVER */
+.mba-search-card input:hover,
+.mba-search-card select:hover {
+    border-color: #16834f;
+}
+
+/* FOCUS */
+.mba-search-card input:focus,
+.mba-search-card select:focus {
+    border-color: #16834f;
+    box-shadow: 0 0 0 3px rgba(22, 131, 79, 0.12);
+}
+
+/* PLACEHOLDER */
+.mba-search-card input::placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+
+
+/* FIND COLLEGES BUTTON */
+
+.find-college-btn {
+    width: 100%;
+    margin-top: 16px;
+
+    padding: 11px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #16834f;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.find-college-btn:hover {
+    background: #0f653c;
+}
+
+
+/* GUIDANCE */
+
+.guidance {
+    margin-top: 18px;
+    padding: 12px;
+
+    background: #f2fff8;
+    border-radius: 7px;
+
+    text-align: center;
+
+    color: #16834f;
+    font-weight: 600;
+}
+
+/* MBA Form Hover Effect */
+
+.mba-search-card {
+    width: 500px;
+    background: white;
+    padding:22px 30px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e5eee9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mba-search-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.mba-search-card select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mba-search-card select:hover {
+    border-color: #16834f;
+    box-shadow: 0 0 0 2px rgba(22, 131, 79, 0.08);
+}
+
+/* ===============================
+   MBA SEARCH RESULTS
+================================ */
+
+.mba-results {
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.mba-results h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #123d2d;
+    margin-bottom: 8px;
+}
+
+.results-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+/* College Card */
+
+.college-card {
+    max-width: 900px;
+    margin: 0 auto 22px;
+    padding: 25px 28px;
+    background: #ffffff;
+    border: 1px solid #e1ebe5;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    transition: 0.3s ease;
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+.college-card h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    color: #123d2d;
+}
+
+
+.college-card p {
+    margin: 7px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.college-location {
+    color: #16834f !important;
+    font-weight: 600;
+}
+
+
+/* Visit College Button */
+
+.college-card-actions {
+    display: flex;
+    align-items: center;
+}
+
+
+.college-website-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #16834f;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+
+.college-website-btn:hover {
+    background: #0f653c;
+    transform: translateY(-2px);
+}
+
+
+/* Loading / No Results */
+
+.loading-results,
+.no-results {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    text-align: center;
+    background: #f2fff8;
+    border-radius: 10px;
+    color: #16834f;
+}
+
+
+.no-results h3 {
+    margin-bottom: 8px;
+}
+/* ===============================
+   MBA COLLEGE DIRECTORY
+================================ */
+
+.mba-directory {
+   display: none;
+    width: 100%;
+    padding: 70px 8%;
+    background: #f7fcf9;
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+}
+
+.directory-header {
+   text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+.directory-header span {
+    color: #16834f;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.directory-header h2 {
+    margin: 10px 0;
+    font-size: 42px;
+    color: #123d2d;
+    white-space: nowrap;
+}
+
+.directory-header p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.directory-results {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.directory-card {
+   width: 100%;
+    max-width: 850px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e1ebe5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.directory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.directory-card h3 {
+    color: #123d2d;
+    font-size: 23px;
+    margin: 0 0 10px;
+}
+
+.directory-card p {
+    color: #555;
+    line-height: 1.5;
+    margin: 7px 0;
+}
+
+.directory-location {
+    color: #16834f !important;
+    font-weight: 600;
+}
+
+.directory-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #16834f;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.directory-card a:hover {
+    background: #0f653c;
+}
+
+@media (max-width: 800px) {
+
+    .directory-results {
+        grid-template-columns: 1fr;
+    }
+
+}
+.college-website-unavailable {
+    display: inline-block;
+    padding: 11px 16px;
+    background: #f5f5f5;
+    color: #777;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.logo {
+    position: relative;   /* keeps text above the overlay */
+    z-index: 1;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.logo span:first-child { color: #fff; }
+.logo span:last-child  { color: #7ed957; }  /* light green accent on "My Uni" */
+
+/* ===== Card: fit content, don't stretch ===== */
+.form-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    align-self: center !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box;
+}
+
+.form-card h2,
+.form-card h3 {
+    font-size: 20px !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.2;
+}
+
+/* ===== Spacing between fields ===== */
+#consultationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ===== Inputs and dropdown boxes: same size ===== */
+#consultationForm input[type="text"],
+#consultationForm input[type="email"],
+#consultationForm input[type="tel"],
+.choices__inner {
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 14px !important;
+    margin: 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    font-size: 13px !important;
+    box-sizing: border-box;
+}
+
+/* ===== Dropdowns: remove gaps, center the text ===== */
+.choices {
+    margin-bottom: 0 !important;
+}
+
+.choices__inner {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.choices__list--single {
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.choices__list--single .choices__item {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.choices[data-type*="select-one"]::after {
+    top: 50% !important;
+    margin-top: -2px !important;
+}
+
+.choices__list--dropdown {
+    z-index: 9999;
+    max-height: 220px;
+}
+
+/* ===== Grey search placeholder ===== */
+.choices__input::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* ===== Checkbox and button ===== */
+#consultationForm label {
+    font-size: 12px;
+    margin: 0;
+}
+
+#consultationForm button[type="submit"] {
+    height: 40px !important;
+    margin-top: 2px !important;
+    border: none;
+    border-radius: 6px;
+}
+/* 1. White card: shrink to fit content, float in the middle */
+div:has(> #consultationForm) {
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: center !important;
+    padding: 14px 20px !important;
+}
+
+/* 2. The wrapper holding the left text + card: stop it stretching the card */
+div:has(> div > #consultationForm),
+div:has(> div:has(> #consultationForm)) {
+    align-items: center !important;
+}
+
+/* 3. Smaller heading */
+div:has(> #consultationForm) > h2,
+div:has(> #consultationForm) > h3 {
+    font-size: 20px !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* 4. Slightly shorter fields and tighter gaps */
+#consultationForm {
+    gap: 6px !important;
+}
+
+#consultationForm input[type="text"],
+#consultationForm input[type="email"],
+#consultationForm input[type="tel"],
+.choices__inner {
+    height: 38px !important;
+    min-height: 38px !important;
+}
+
+#consultationForm button[type="submit"] {
+    height: 40px !important;
+}
+
+
+header.navbar {
+    background-image: url('./images/photos.jpg');
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.navbar {
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 4px 0 -1px #7ed957;
+}
+
+
+/* Make all country options accessible in the dropdown */
+#country + .choices__list--dropdown,
+#country ~ .choices__list--dropdown,
+.choices[data-type*="select-one"] .choices__list--dropdown {
+    max-height: 250px;
+}
+
+.choices__list--dropdown .choices__list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+
+
+/* Allow the country dropdown to scroll through every option */
+.choices[data-type*="select-one"] .choices__list--dropdown {
+    max-height: 250px !important;
+    overflow: hidden !important;
+}
+
+.choices[data-type*="select-one"] .choices__list--dropdown .choices__list {
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+#formMessage {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
