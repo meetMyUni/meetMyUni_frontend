@@ -1,0 +1,338 @@
+
+/* ================================
+   MBBS COLLEGES SECTION
+================================ */
+
+.mbbs-colleges-section {
+  width: 100%;
+  padding: 70px 6%;
+  background: #f8f8ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section Heading */
+
+.mbbs-colleges-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.mbbs-colleges-heading h2 {
+  color: #29265c;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.mbbs-colleges-heading p {
+  color: #66677d;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* ================================
+   COLLEGE GRID
+================================ */
+
+.mbbs-colleges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ================================
+   COLLEGE CARD
+================================ */
+
+.mbbs-college-card {
+  position: relative;
+  min-height: 440px;
+  border-radius: 22px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 25px rgba(41, 38, 92, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  isolation: isolate;
+}
+
+.mbbs-college-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(100, 108, 255, 0.25);
+}
+
+/* Dark Image Overlay */
+
+.mbbs-college-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 23, 65, 0.38) 0%,
+    rgba(25, 23, 65, 0.65) 45%,
+    rgba(25, 23, 65, 0.96) 100%
+  );
+}
+
+/* Card Content */
+
+.mbbs-college-content {
+  position: relative;
+  z-index: 1;
+  min-height: 440px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+/* ================================
+   LOGO AND FAVOURITE
+================================ */
+
+.mbbs-college-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mbbs-college-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #646cff;
+  font-size: 17px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+.mbbs-heart {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mbbs-heart:hover {
+  background: #ffffff;
+  color: #bd34fe;
+  transform: scale(1.08);
+}
+
+.mbbs-heart.liked {
+  background: #ffffff;
+  color: #bd34fe;
+}
+
+/* ================================
+   COLLEGE INFORMATION
+================================ */
+
+.mbbs-college-info h3 {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.mbbs-college-location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #e4e2ff;
+  font-size: 13px;
+  margin-bottom: 17px;
+}
+
+/* ================================
+   BADGES
+================================ */
+
+.mbbs-college-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.mbbs-exam-badge,
+.mbbs-rating-badge,
+.mbbs-established-badge {
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.mbbs-exam-badge {
+  background: #646cff;
+  color: #ffffff;
+}
+
+.mbbs-rating-badge {
+  background: #ffda4b;
+  color: #29265c;
+}
+
+.mbbs-established-badge {
+  background: #bd34fe;
+  color: #ffffff;
+}
+
+/* ================================
+   FEES AND SALARY DETAILS
+================================ */
+
+.mbbs-college-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  padding: 17px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.mbbs-college-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mbbs-college-details span {
+  color: #d5d2ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+.mbbs-college-details strong {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.mbbs-college-details .mbbs-total-courses {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================================
+   ACTION BUTTON
+================================ */
+
+.mbbs-college-actions {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.mbbs-college-actions button {
+  width: 100%;
+  padding: 13px 18px;
+  border: 1px solid #646cff;
+  border-radius: 10px;
+  background: #646cff;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mbbs-college-actions button:hover {
+  background: #bd34fe;
+  border-color: #bd34fe;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .mbbs-colleges-section {
+    padding: 55px 4%;
+  }
+
+  .mbbs-colleges-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mbbs-college-content {
+ position: relative;
+  z-index: 1;
+  min-height: 440px;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #ffffff;
+  }
+
+  .mbbs-college-info h3 {
+    font-size: 17px;
+  }
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 650px) {
+  .mbbs-colleges-section {
+    padding: 45px 5%;
+  }
+
+  .mbbs-colleges-heading h2 {
+    font-size: 27px;
+  }
+
+  .mbbs-colleges-heading p {
+    font-size: 13px;
+  }
+
+  .mbbs-colleges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mbbs-college-card,
+  .mbbs-college-content {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mbbs-college-content {
+    padding: 17px;
+  }
+
+  .mbbs-college-info h3 {
+    font-size: 16px;
+  }
+
+  .mbbs-college-details strong {
+    font-size: 14px;
+  }
+}

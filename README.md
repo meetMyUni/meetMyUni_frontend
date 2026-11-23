@@ -1,30 +1,16 @@
-# Study Abroad Website – Frontend
+# React + Vite
 
-## About the Project
-A responsive Study Abroad website designed to help students explore international education opportunities and submit consultation enquiries.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
+Currently, two official plugins are available:
 
-## Features
-- Responsive user interface
-- Study Abroad information
-- Consultation enquiry form
-- Country, state and city selection
-- Image-based website sections
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Project Structure
-- `index.html` – Website structure
-- `style.css` – Website styling
-- `script.js` – Frontend functionality
-- `Images/` – Website images
+## React Compiler
 
-## How to Run
-1. Clone this repository.
-2. Open the project folder in VS Code.
-3. Open `index.html` using Live Server.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Developer
-Aastha Keshari
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

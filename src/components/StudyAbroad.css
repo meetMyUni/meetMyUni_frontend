@@ -1,0 +1,358 @@
+
+.study-abroad-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #29265C;
+}
+
+/* Scholarship moving banner */
+.study-scholarship-banner {
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  background: #29265C;
+  display: flex;
+  align-items: center;
+}
+
+.study-banner-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: studyBannerMove 18s linear infinite;
+}
+
+.study-banner-track span {
+  white-space: nowrap;
+  padding-right: 80px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes studyBannerMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hero section */
+.study-hero {
+  min-height: calc(100vh - 48px);
+  width: 100%;
+  padding: 55px 5%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.30)
+    ),
+    url("/college-logos/study2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.study-hero-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.study-hero-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #29265C;
+}
+
+.study-hero-content h1 span {
+  color:  #29265C;
+}
+
+.study-benefits {
+  padding-left: 22px;
+  margin: 0;
+}
+
+.study-benefits li {
+  font-size: 27px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #29265C;
+}
+
+/* Consultation form */
+.study-form-container {
+  width: 420px;
+  max-width: 100%;
+  flex-shrink: 0;
+
+  padding: 22px 20px;
+  box-sizing: border-box;
+
+  background: #fff;
+  color: #29265C;
+  border: 3px solid  #29265C;;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 35px rgba(41, 38, 92, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.study-form-container:hover {
+  transform: translateY(-5px);
+}
+
+.study-form-heading {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 9px 12px;
+  margin-bottom: 12px;
+  border-radius: 30px;
+  background: #F1F0FF;
+  color: #29265C;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Main form heading */
+.study-form-container h2 {
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: #29265C;
+}
+
+/* Description */
+.study-form-container > p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  color: #444;
+}
+
+.study-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input fields */
+.study-form-container input:not([type="checkbox"]),
+.study-form-container select {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 11px;
+  box-sizing: border-box;
+
+  border: 1px solid #c9c7ff;
+  border-radius: 6px;
+  outline: none;
+
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+}
+
+.study-form-container input:focus,
+.study-form-container select:focus {
+  border-color:  #29265C;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.12);
+}
+
+/* Terms */
+.study-terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+  font-size: 12px;
+}
+
+.study-terms input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: #29265C;
+}
+
+/* Submit button */
+.study-submit-btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+
+  background:  #29265C;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.study-submit-btn:hover {
+  background: #BD34FE;
+}
+
+.study-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.study-form-message {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.study-form-message.success {
+  color: #16843e;
+}
+
+.study-form-message.error {
+  color: #d62828;
+}
+
+/* Choices.js dropdown styling */
+.study-form-container .choices {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.study-form-container .choices__inner {
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #c9c7ff;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.study-form-container .choices.is-focused .choices__inner,
+.study-form-container .choices.is-open .choices__inner {
+  border-color: #29265C;
+}
+
+.study-form-container .choices__list--dropdown {
+  color: #333;
+  z-index: 20;
+}
+
+.study-form-container .choices__list--dropdown .choices__item {
+  color: #333;
+}
+
+.study-form-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background: #F1F0FF;
+  color: #29265C;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .study-hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 45px 6%;
+  }
+
+  .study-hero-content {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .study-form-container {
+    width: 450px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .study-scholarship-banner {
+    height: 42px;
+  }
+
+  .study-banner-track span {
+    font-size: 13px;
+  }
+
+  .study-hero {
+    padding: 35px 18px;
+  }
+
+  .study-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .study-benefits li {
+    font-size: 16px;
+  }
+
+  .study-form-container {
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .study-form-container h2 {
+    font-size: 21px;
+  }
+}
+
+/* College details popup */
+.study-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.study-form-container.study-form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1000;
+  width: min(420px, calc(100vw - 30px));
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.study-form-container.study-form-modal:hover {
+  transform: translate(-50%, -50%) !important;
+}
+
+.study-modal-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: #F1F0FF;
+  color:  #29265C;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.study-modal-close:hover {
+  background:  #29265C;
+  color: #fff;
+}

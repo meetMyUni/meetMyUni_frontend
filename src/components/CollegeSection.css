@@ -1,0 +1,267 @@
+
+.featured-colleges {
+  width: 100%;
+  padding: 65px 5%;
+  box-sizing: border-box;
+  background: #f5f7fb;
+  color: #29265C;
+}
+
+.college-section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.college-section-heading span {
+  color: #646CFF;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.college-section-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 12px 0;
+  color: #29265C;
+}
+
+.college-section-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #647084;
+}
+
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.college-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e9edf3;
+  box-shadow: 0 5px 20px rgba(41, 38, 92, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 35px rgba(41, 38, 92, 0.13);
+}
+
+.college-image-wrapper {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  background: #dce5f0;
+}
+
+.college-campus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.college-card:hover .college-campus-image {
+  transform: scale(1.06);
+}
+
+.college-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.12)
+  );
+  pointer-events: none;
+}
+
+.college-logo-box {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 75px;
+  height: 75px;
+  border-radius: 13px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.college-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.college-popular {
+  position: absolute;
+  right: 17px;
+  top: 20px;
+  background: #ff941f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.college-card-content {
+  padding: 23px;
+}
+
+.college-card-content h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0 0 14px;
+  color: #29265C;
+  min-height: 55px;
+}
+
+.college-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.college-rating,
+.college-year {
+  padding: 7px 11px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.college-rating {
+  background: #fff4ce;
+  color: #9a6900;
+}
+
+.college-year {
+  background: #F1F0FF;
+  color: #646CFF;
+}
+
+.college-description {
+  color: #5b6575;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 48px;
+  margin: 0 0 17px;
+}
+
+.college-fees {
+  border-top: 1px solid #e9edf3;
+  padding-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.college-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #7b8493;
+}
+
+.college-fees h4 {
+  margin: 9px 0 6px;
+  font-size: 21px;
+  color: #646CFF;
+}
+
+.college-fees p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #667386;
+}
+
+.college-course-count {
+  text-align: center;
+  min-width: 65px;
+  color: #647084;
+  font-size: 12px;
+}
+
+.college-course-count strong {
+  display: block;
+  color: #29265C;
+  font-size: 20px;
+  margin-top: 7px;
+}
+
+.college-details-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #646CFF;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.college-details-btn:hover {
+  background: #BD34FE;
+}
+
+.college-details-btn span {
+  margin-left: 7px;
+  font-size: 19px;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .college-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .featured-colleges {
+    padding: 45px 16px;
+  }
+
+  .college-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .college-image-wrapper {
+    height: 210px;
+  }
+
+  .college-card-content {
+    padding: 19px;
+  }
+
+  .college-card-content h3 {
+    font-size: 19px;
+    min-height: auto;
+  }
+
+  .college-fees h4 {
+    font-size: 18px;
+  }
+}

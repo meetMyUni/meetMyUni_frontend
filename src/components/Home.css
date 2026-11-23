@@ -1,0 +1,435 @@
+
+/* ===== HOME PAGE ===== */
+
+.home-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #29265C;
+}
+
+/* ===== HERO SECTION ===== */
+
+.home-hero {
+  width: 100%;
+  min-height: 570px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.home-hero-overlay {
+  min-height: 570px;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 19, 43, 0.82),
+    rgba(5, 19, 43, 0.35),
+    rgba(5, 19, 43, 0.12)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 9%;
+  position: relative;
+}
+
+.home-hero-content {
+  max-width: 750px;
+  color: #fff;
+}
+
+.home-hero-content p {
+  color: #FFDA4B;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.home-hero-content h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  line-height: 1.12;
+  font-weight: 800;
+  margin: 0 0 22px;
+}
+
+.home-hero-content span {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 28px;
+  left: 9%;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dots button {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero-dots button.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #646CFF;
+}
+
+/* ===== SECTION HEADINGS ===== */
+
+.home-section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.home-section-heading p {
+  color: #646CFF;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.home-section-heading h2 {
+  color: #29265C;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.home-section-heading span {
+  color: #687386;
+  font-size: 16px;
+}
+
+/* ===== STUDY ABROAD COUNTRIES ===== */
+
+.home-countries {
+  padding: 75px 6% 65px;
+  background: #f8fafc;
+}
+
+.country-slider {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 18px;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: #646CFF #e4e8ee;
+}
+
+.country-slider:active {
+  cursor: grabbing;
+}
+
+.country-slider::-webkit-scrollbar {
+  height: 7px;
+  display: block;
+}
+
+.country-slider::-webkit-scrollbar-track {
+  background: #e4e8ee;
+  border-radius: 10px;
+}
+
+.country-slider::-webkit-scrollbar-thumb {
+  background: #646CFF;
+  border-radius: 10px;
+}
+
+.country-card {
+  flex: 0 0 270px;
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+.country-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.country-card:hover img {
+  transform: scale(1.08);
+}
+
+.country-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  background: linear-gradient(
+    transparent 35%,
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.country-card-overlay h3 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ===== TOP CITIES ===== */
+
+.home-cities {
+  padding: 75px 7%;
+  background: #fff;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.city-card {
+  overflow: hidden;
+  border: 1px solid #e5e9ef;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+.city-card img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+}
+
+.city-card h3 {
+  color: #29265C;
+  font-size: 17px;
+  text-align: center;
+  padding: 15px 8px;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1000px) {
+  .city-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-hero,
+  .home-hero-overlay {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-hero,
+  .home-hero-overlay {
+    min-height: 420px;
+  }
+
+  .home-hero-overlay {
+    padding: 45px 7%;
+  }
+
+  .home-hero-content h1 {
+    font-size: 39px;
+  }
+
+  .home-hero-content span {
+    font-size: 15px;
+  }
+
+  .hero-dots {
+    left: 7%;
+  }
+
+  .home-countries,
+  .home-cities {
+    padding: 50px 5%;
+  }
+
+  .country-card {
+    flex-basis: 235px;
+    height: 285px;
+  }
+
+  .city-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .city-card img {
+    height: 120px;
+  }
+
+  .city-card h3 {
+    font-size: 15px;
+  }
+}
+
+/* Homepage Education Information Sections */
+
+.home-info-section {
+  min-height: 350px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-info-content {
+  max-width: 760px;
+}
+
+.home-info-label {
+  color: #646CFF;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.home-info-content h2 {
+  color: #29265C;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.home-info-content > p:not(.home-info-label) {
+  color: #52627a;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.study-info {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255,255,255,.97),
+    rgba(255,255,255,.78)
+  ), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85");
+}
+
+.mba-info {
+  background-image: linear-gradient(
+    90deg,
+    rgba(245,248,255,.97),
+    rgba(245,248,255,.78)
+  ), url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85");
+}
+
+.mbbs-info {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255,255,255,.96),
+    rgba(255,255,255,.78)
+  ), url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=85");
+}
+
+/* Information section buttons */
+.home-info-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #646CFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.home-info-button:hover {
+  background: #BD34FE;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .home-info-section {
+    min-height: 320px;
+    padding: 45px 22px;
+  }
+
+  .home-info-content h2 {
+    font-size: 28px;
+  }
+
+  .home-info-content > p:not(.home-info-label) {
+    font-size: 15px;
+  }
+}
+
+/* Reduce extra space around homepage information sections */
+.home-info-section {
+  min-height: auto;
+  height: auto;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Study Abroad section */
+.study-info {
+  padding-top: 55px !important;
+  padding-bottom: 45px !important;
+}
+
+/* Top Cities section */
+.home-cities {
+  margin-top: 0 !important;
+  padding-top: 45px !important;
+}
+
+/* MBA section spacing */
+.mba-info {
+  margin-bottom: 0 !important;
+  padding-top: 45px !important;
+  padding-bottom: 35px !important;
+}
+
+/* MBBS section spacing */
+.mbbs-info {
+  margin-top: 0 !important;
+  padding-top: 35px !important;
+  padding-bottom: 55px !important;
+}
+
+/* Space between MBA and MBBS sections */
+.mba-info {
+  margin-bottom: 35px !important;
+}
+
+.mbbs-info {
+  margin-top: 0 !important;
+}
+
+/* Remove background images from all three sections */
+.study-info,
+.mba-info,
+.mbbs-info {
+  background-image: none !important;
+  background-color: #ffffff !important;
+}
